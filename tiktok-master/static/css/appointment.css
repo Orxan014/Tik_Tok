@@ -1,0 +1,441 @@
+img.wp-smiley,
+img.emoji {
+display: inline !important;
+border: none !important;
+box-shadow: none !important;
+height: 1em !important;
+width: 1em !important;
+margin: 0 .07em !important;
+vertical-align: -0.1em !important;
+background: none !important;
+padding: 0 !important;
+}
+
+#rs-demo-id {}
+
+.woocommerce form .form-row .required { visibility: visible; }
+
+.cost-calculator-datepicker .ui-datepicker-current-day,
+.cost-calculator-box input[type="checkbox"]:checked+.cost-calculator-checkbox-label,
+.cost-calculator-box input[type="checkbox"]:checked+.cost-calculator-checkbox-label .checkbox-box,
+.cost-calculator-box .ui-slider-handle:after,
+.cost-calculator-box .ui-slider-range-min,
+input[type='checkbox']:checked + span.cost-calculator-switch-slider,
+.cost-calculator-container .cost-calculator-more,
+.cost-calculator-container .cost-calculator-more[type="submit"]
+{
+background-color: #1E69B8;
+}
+.cost-calculator-box input[type="checkbox"]:checked+.cost-calculator-checkbox-label::before,
+.cost-calculator-datepicker .ui-datepicker-prev:hover span::before,
+.cost-calculator-datepicker .ui-datepicker-next:hover span::before,
+.cost-calculator-summary-price,
+.cost-calculator-box .ui-selectmenu-button.ui-corner-top .ui-icon,
+.cost-calculator-box .ui-selectmenu-button:hover .ui-icon,
+.cost-calculator-box .cost-calculator-datepicker-container:hover .ui-icon,
+.cost-calculator-dropdown.ui-selectmenu-menu .ui-menu li.ui-state-focus,
+div.cost-calculator-summary-box::before
+{
+color: #1E69B8;
+}
+.cost-calculator-box input[type="checkbox"]:checked+.cost-calculator-checkbox-label,
+.cost-calculator-box input[type="checkbox"]:checked+.cost-calculator-checkbox-label .checkbox-box,
+.cost-calculator-box .ui-slider-handle .cost-slider-tooltip .cost-calculator-value,
+.cost-calculator-container .cost-calculator-more,
+.cost-calculator-container .cost-calculator-more[type="submit"]
+{
+border-color: #1E69B8;
+}
+.cost-calculator-box .ui-slider-handle .cost-slider-tooltip .cost-calculator-arrow::before
+{
+border-color: #1E69B8 transparent;
+}
+.cost-calculator-datepicker .ui-datepicker-prev span::before,
+.cost-calculator-datepicker .ui-datepicker-next span::before,
+.cost-calculator-dropdown.ui-selectmenu-menu .ui-menu li,
+.cost-calculator-box .cost-calculator-checkbox-label,
+.cost-calculator-box .ui-slider-handle .cost-slider-tooltip .cost-calculator-value,
+.cost-calculator-box .ui-selectmenu-button span.ui-selectmenu-text,
+.cost-calculator-box .ui-selectmenu-button .ui-icon,
+.cost-calculator-box .cost-calculator-datepicker-container .ui-icon,
+.cost-calculator-price-description,
+input[type='checkbox'] + span.cost-calculator-switch-slider::after,
+.cost-calculator-form .cost-calculator-contact-box-submit-container p,
+.cost-calculator-container input,
+.cost-calculator-container input[type='text'],
+.cost-calculator-container input[type='email'],
+.cost-calculator-container input[type='number'],
+.cost-calculator-container textarea,
+.cost-calculator-terms-container label
+{
+color: #777777;
+}
+.cost-calculator-datepicker.ui-datepicker,
+.cost-calculator-box .cost-calculator-checkbox-label,
+.cost-calculator-box .ui-slider .ui-slider-handle,
+.cost-calculator-box .ui-selectmenu-button,
+.cost-calculator-dropdown.ui-selectmenu-menu .ui-menu,
+div.cost-calculator-box .ui-selectmenu-button .ui-icon,
+div.cost-calculator-box .cost-calculator-datepicker-container .ui-icon,
+.cost-calculator-container input,
+.cost-calculator-container input[type='text'],
+.cost-calculator-container input[type='email'],
+.cost-calculator-container input[type='number'],
+.cost-calculator-container textarea,
+.cost-calculator-container .g-recaptcha-wrapper
+{
+border-color: #E2E6E7;
+}
+.cost-calculator-datepicker.ui-datepicker .ui-datepicker-title,
+.cost-calculator-box label,
+.cost-calculator-contact-box>.vc_row>label
+{
+color: #333333;
+}
+.cost-calculator-box .ui-slider,
+input[type='checkbox'] + span.cost-calculator-switch-slider
+{
+background-color: #E2E6E7;
+}
+body .cost-calculator-container,
+body .cost-calculator-container .ui-widget,
+.cost-calculator-dropdown.ui-selectmenu-menu,
+.cost-calculator-box label,
+.cost-calculator-container input,
+.cost-calculator-container input[type='text'],
+.cost-calculator-container input[type='email'],
+.cost-calculator-container input[type='number'],
+.cost-calculator-container textarea,
+.cost-calculator-terms-container label,
+.cost-calculator-terms-container label a,
+input[type='checkbox'] + span.cost-calculator-switch-slider::after,
+.cost-calculator-box .ui-selectmenu-button span.ui-selectmenu-text,
+.cost-calculator-container .cost-calculator-more,
+.cost-calculator-container .cost-calculator-more[type="submit"],
+.cost-calculator-container .cost-calculator-flex-box label,
+.cost-calculator-datepicker.ui-datepicker,
+.cost-calculator-datepicker.ui-datepicker table td,
+.cost-calculator-datepicker.ui-datepicker table th,
+.cost-calculator-dropdown.ui-selectmenu-menu .ui-menu li
+{
+font-family: 'Open Sans';
+}
+.cost-calculator-form .cost-calculator-flex-box textarea
+{
+height: 190px;
+}
+.cost-calculator-dropdown.ui-selectmenu-menu 
+{
+-moz-box-shadow: none;
+-webkit-box-shadow: none;
+box-shadow: none;
+}
+.cost-calculator-datepicker.ui-datepicker .ui-datepicker-title
+{
+font-weight: 600;
+}
+.cost-calculator-box label+.cost-calculator-switch,
+.cost-calculator-box input+input+.cost-calculator-checkbox-label.cost-calculator-checkbox-default,
+.cost-calculator-contact-box .cost-calculator-flex-box,
+.cost-calculator-contact-box .cost-calculator-flex-box fieldset.wpb_column.vc_column_container,
+.cost-calculator-contact-box .cost-calculator-flex-box input[type="text"],
+.cost-calculator-form .cost-calculator-contact-box-submit-container,
+.cost-calculator-box input+.cost-slider-container,
+body .vc_row .cost-calculator-box input+input.cost-calculator-big,
+.cost-calculator-box input+select+.ui-selectmenu-button,
+.cost-calculator-box input+.select_container+.ui-selectmenu-button,
+.cost-calculator-box input+.cost-calculator-datepicker-container
+{
+margin-top: 20px;
+}
+.cost-calculator-form .cost-calculator-flex-box .cost-calculator-block:first-child input
+{
+margin-top: 0;
+}
+.cost-calculator-box label,
+.cost-calculator-contact-box>.vc_row>label
+{
+display: block;
+font-weight: 600;
+background: #F5F5F5;
+padding: 11px 16px 13px;
+line-height: 26px
+}
+.cost-calculator-box label.cost-calculator-switch 
+{
+padding: 0;
+font-weight: 400;
+background: none;
+}
+.cost-calculator-contact-box .cost-calculator-flex-box
+{
+display: block;
+}
+.cost-calculator-contact-box .cost-calculator-flex-box fieldset.wpb_column.vc_column_container
+{
+width: 100%;
+margin-left: 0;
+}
+.cost-calculator-contact-box .cost-calculator-flex-box .wpb_column.vc_column_container:first-child
+{
+margin-top: 0;
+}
+.cost-calculator-container .cost-calculator-flex-box label
+{
+margin-top: 28px;
+margin-bottom: -49px;
+}
+.cost-calculator-form .cost-calculator-flex-box .cost-calculator-block:first-child label
+{
+margin-top: 8px;
+margin-bottom: -29px;
+}
+.cost-calculator-form .cost-calculator-contact-box-submit-container .vc_row
+{
+margin: 0;
+padding: 0;
+}
+.vc_row .wpb_column div.cost-calculator-box.cost-calculator-float
+{
+margin: 0;
+}
+.cost-calculator-box .cost-calculator-checkbox-label
+{
+margin-right: -1px;
+margin-top: -1px;
+-moz-border-radius: 0;
+-webkit-border-radius: 0;
+border-radius: 0;
+padding: 12px 15px 10px 20px;
+color: #A4AAB3;
+background: #FFF;
+font-weight: 400;
+}
+.cost-calculator-box .cost-calculator-checkbox-label.cost-calculator-checkbox-default
+{
+width: 14px;
+}
+.cost-calculator-box .cost-calculator-checkbox-label::before
+{
+position: relative;
+top: -2px;
+left: -4px;
+z-index: 1;
+font-size: 16px;
+color: #FFF;
+margin-right: 10px;
+font-family: "cc-template";
+content: "c";
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+vertical-align: middle;
+speak: none;
+line-height: 1;
+direction: ltr;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+.cost-calculator-box input[type="checkbox"]:checked+.cost-calculator-checkbox-label
+{
+    color: #333;
+    border-color: #E2E6E7;
+    background: #F5F5F5;
+
+}
+.cost-calculator-box input[type="checkbox"]:checked+.cost-calculator-checkbox-label::before
+{
+color: #FFF;
+}
+.cost-calculator-box .cost-calculator-checkbox-label.cost-calculator-checkbox-default::before
+{
+margin-right: 0;
+}
+.cost-calculator-box .cost-calculator-checkbox-label .checkbox-box
+{
+position: absolute;
+margin-left: 0;
+left: 12px;
+width: 22px;
+height: 22px;
+border: 1px solid #E2E6E7;
+}
+.cost-calculator-box .ui-selectmenu-button .ui-icon,
+.cost-calculator-box .cost-calculator-datepicker-container .ui-icon
+{
+border-left: 1px solid #E2E6E7;
+padding: 14px 12px 17px;
+}
+.cost-calculator-dropdown.ui-selectmenu-menu .ui-menu li
+{
+border-top: 1px solid #E2E6E7}
+.cost-calculator-dropdown.ui-selectmenu-menu .ui-menu li:first-child
+{
+padding-top: 13px;
+}
+.cost-calculator-dropdown.ui-selectmenu-menu .ui-menu li:last-child
+{
+padding-bottom: 13px;
+}
+.cost-calculator-container .cost-calculator-more
+{
+position: relative;
+display: block;
+font-weight: 600;
+padding: 19px 0 20px;
+line-height: normal;
+letter-spacing: 1px;
+border: none;
+-moz-border-radius: 0;
+-webkit-border-radius: 0;
+border-radius: 0;
+}
+.cost-calculator-more span
+{
+position: relative;
+z-index: 10;
+margin: 0 24px;
+}
+.cost-calculator-more::before
+{
+position: absolute;
+content: "";
+width: 5px;
+height: 100%;
+top: 0;
+left: 0;
+background: rgba(0,0,0,0.1);
+transition: all 0.2s ease 0s;
+-webkit-transition: all 0.2s ease 0s;
+-moz-transition: all 0.2s ease 0s;
+z-index: 9;
+}
+.cost-calculator-container .cost-calculator-more:hover
+{
+background: #1E69B8;
+color: #FFF;
+opacity: 1;
+}
+.cost-calculator-more:hover::before
+{
+width: 100%;
+background: rgba(0,0,0,0.12);
+}
+.vc_row .wpb_column .cost-calculator-box.cost-calculator-summary-box
+{
+border: 1px solid #E2E6E7;
+padding: 26px 30px 28px;
+}
+.cost-calculator-summary-price
+{
+float: right;
+}
+.cost-calculator-price-description
+{
+text-align: right;
+}
+.cost-calculator-fieldset-with-recaptcha,
+.cost-calculator-column-with-recaptcha
+{
+display: -ms-flexbox;
+display: -webkit-flexbox;
+display: -webkit-flex;
+display: flex;
+-ms-flex-direction: column-reverse;
+-webkit-flex-direction: column-reverse;
+-moz-flex-direction: column-reverse;
+flex-direction: column-reverse;
+}
+.vc_row.wpb_row.cost-calculator-row-with-recaptcha .vc_column_container.wpb_column
+{
+width: 100%;
+margin-left: 0;
+margin-right: 0;
+margin-top: 22px;
+}
+.vc_row.wpb_row.cost-calculator-row-with-recaptcha .vc_column_container.wpb_column:first-child
+{
+margin-top: 0;
+}
+.cost-calculator-container .wpb_column div.g-recaptcha-wrapper
+{
+float: none;
+margin: 0;
+border-color: #E2E6E7;
+-ms-flex-item-align: start;
+-webkit-align-self: start;
+-moz-align-self: start;
+align-self: start;
+}
+.cost-calculator-form.cost-calculator-container .vc_row.wpb_row.cost-calculator-contact-box-submit-container div.vc_row.wpb_row.cost-calculator-button-with-recaptcha
+{
+float: none;
+margin-top: 20px;
+margin-left: 0;
+margin-right: 0;
+}
+.cost-calculator-contact-box-submit-container .cost-calculator-recaptcha-container
+{
+clear: both;
+margin-top: 20px;
+display: -ms-flexbox;
+display: -webkit-flexbox;
+display: -webkit-flex;
+display: flex;
+-ms-flex-direction: column-reverse;
+-webkit-flex-direction: column-reverse;
+-moz-flex-direction: column-reverse;
+flex-direction: column-reverse;
+}
+.cost-calculator-terms-container
+{
+padding-bottom: 20px;
+}
+.cost-calculator-contact-box-submit-container .vc_col-sm-6 .cost-calculator-terms-container,
+.cost-calculator-fieldset-with-recaptcha .cost-calculator-terms-container
+{
+padding-bottom: 0;
+}
+.cost-calculator-contact-box-submit-container .cost-calculator-terms-container
+{
+-ms-flex-order: 1;
+-webkit-order: 1;
+-moz-order: 1;
+order: 1;
+height: auto;
+}
+.cost-calculator-form.cost-calculator-container .cost-calculator-contact-box-submit-container .cost-calculator-column-with-recaptcha .cost-calculator-recaptcha-container .vc_row.wpb_row.cost-calculator-button-with-recaptcha,
+.cost-calculator-contact-box-submit-container .vc_col-sm-6 .cost-calculator-terms-container + .vc_row
+{
+margin-top: 20px;
+}
+div.cost-calculator-contact-box-submit-container .cost-calculator-column-with-recaptcha .cost-calculator-terms-container
+{
+-ms-flex-item-align: start;
+-webkit-align-self: start;
+-moz-align-self: start;
+align-self: start;
+}
+.cost-calculator-row-with-recaptcha p
+{
+padding: 0;
+}
+@media screen and (max-width:767px)
+{
+.wpb_column div.vc_row.cost-calculator-contact-box-submit-container .vc_col-sm-6
+{
+    margin-top: 20px;
+}
+.wpb_column div.vc_row.cost-calculator-contact-box-submit-container .vc_col-sm-6:first-child
+{
+    margin-top: 0;
+}
+div.cost-calculator-fieldset-with-recaptcha .cost-calculator-terms-container
+{
+    padding-bottom: 0;
+}
+}
+
+.woocommerce-product-gallery{ opacity: 1 !important; }
+.wpb_animate_when_almost_visible { opacity: 1; }

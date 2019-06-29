@@ -1,0 +1,69 @@
+body,html {
+    background-image: url(../img/abstract-background-291.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#header {
+    margin-left: -8.1em;
+    width: 119.9%;
+}
+
+#txt {
+    margin-left: -5em;
+}
+
+#li_tag {
+    float: right;
+}
+
+.txt-one {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: -2.1em;
+  margin-left: 22em;
+  font-size: 30px;
+}
+
+.img {
+    margin-left: 60em;
+    margin-top: 3px;
+    width: 6em;
+}
+
+.txt-two {
+    margin-left: 26em;
+    font-size: 30px;
+    margin-top: 2em;
+}
+
+#txt-three {
+    margin-left: 65.7em;
+    font-size: 12px;
+    font-family: monospace;
+    margin-top: 2em;
+}
+
+#txt-four {
+    margin-left: 55em;
+    font-size: 14px;
+    font-family: monospace;
+    margin-top: 1em;
+}
+
+.link-two {
+    margin-left: 1em;
+    color: white;
+    text-decoration: none;
+    outline: none;
+}
+
+.link-two:hover {
+    text-decoration: none;
+    color: darkkhaki;
+}
+
+#body-one {
+    margin-left: 6em;
+    margin-top: 12.5em;
+}

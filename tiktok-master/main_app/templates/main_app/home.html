@@ -1,0 +1,1304 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Tiktok - Avtomobil Mexanika - Mexanika Çalıştayı üçün HTML5 Şablonu</title>
+    <meta name="description" content="AutoRepair Template built for  mechanic auto shop, car repair, auto mechanic, car service, auto repair shop, mechanic workshop, auto service, automotive, batteries, tire or wheel shop. Look good on any devices.">
+    <meta name="keywords" content="mechanic auto shop, car repair, auto mechanic, car service, auto repair shop, mechanic workshop, auto service, automotive, batteries, tire or wheel shop. Look good on any devices.">
+    <meta name="author" content="themesparagon.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <link rel="shortcut icon" href="{% static 'assets/img/tiktok_final_PNG_250x.png'%}">
+    <link rel="apple-touch-icon-precomposed" href="{% static 'assets/icon/apple-touch-icon-158-precomposed.png' %}">
+</head>
+<body class="front-page no-sidebar no-padding-content menu-has-search">
+<div id="wrapper" class="animsition">
+<div id="page" class="clearfix">
+    <div class="container">
+        <div id="header" class="navbar navbar-default">
+            <div class="container">
+                <div id="txt" class="navbar-header">
+                    <img class="img-header" src="{% static 'assets/img/tiktok_final_PNG_250x.png' %}">
+                    <a href="{% url 'main_app:main_app-home" class="navbar-brand">TikTok</a>
+                </div>
+                <div>
+                    <ul id="li_tag" class="nav navbar-nav">
+                        <li><a class="login-page" href="{%  url 'users:login' %}">Daxil ol</a></li>
+                        <li><a class="register-page" href="{%  url 'users:register' %}">Qeydiyyat</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="site-header" class="style-1">
+        <div id="site-header-inner" class="icons wprt-container">
+            <div class="wrap-inner clearfix">          
+                <div id="site-logo" class="clearfix">
+                </div>
+
+                <div class="mobile-button"><span></span></div>
+               
+                <div id="header-aside">                    
+                    <div class="header-info">
+                        <div class="inner">
+                            <div class="info-one">
+                                <div class="info-wrap">
+                                    <div class="info-i"><span><i class="fa fa-phone"></i></span></div>
+                                    <div class="info-c"><span class="title">+1 522-356-7800</span><br><span class="subtitle">support@autorepair.com</span></div>
+                                </div>
+                            </div>
+
+                            <div class="info-two">
+                                <div class="info-wrap">
+                                    <div class="info-i"><span><i class="fa fa-home"></i></span></div>
+                                    <div class="info-c"><span class="title">Phoenix Way, Stretford</span><br><span class="subtitle">Manchester M41 7TB, UK</span></div>
+                                </div>
+                            </div>
+
+                            <div class="info-three">
+                                <div class="info-wrap">
+                                    <div class="info-i"><span><i class="fa fa-clock-o"></i></span></div>
+                                    <div class="info-c"><span class="title">8:00 - 18:00</span><br><span class="subtitle">Bazar ertəsindən & Cümə gününədək</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /#header-aside -->
+            </div>
+        </div><!-- /#site-header-inner -->
+
+        <div class="site-navigation-wrap">
+            <div class="wprt-container inner">
+                <nav id="main-nav" class="main-nav">
+                    <ul id="menu-primary-menu" class="menu">
+                        <li class="menu-item current-menu-item"><a href="{% url 'main_app:main_app-home' %}">Ana Səhifə</a></li>
+                        <li class="menu-item"><a href="page-team.html">
+                                BİZİM KOMANDA</a></li>
+                        </li>
+                        <li class="menu-item menu-item-has-children"><a href="{%url 'appointments_app:appointments' %}">Appointments</a>
+                            <ul class="sub-menu">
+                                <li><a href="page-service-detail.html">
+                                        Xidmətlər ətraflı</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item"><a href="page-contact.html">ƏLAQƏ</a></li>   
+                        <li id=display-log class="menu-item"><a href="{% url 'users:login'">Daxil ol</a></li>
+                        <li id="display-reg" class="menu-item"><a href="{% url 'users:register'">Qeydiyyat</a></li>                          
+                    </ul>
+                </nav><!-- /#main-nav -->
+
+                <div id="header-search">
+                    <a class="header-search-icon" href="#"><span class="fa fa-search"></span></a>
+                    <form role="search" method="get" class="header-search-form" action="#">
+                        <label class="screen-reader-text">Axtarmaq neyese qore:</label>
+                        <input type="text" value="" name="s" class="header-search-field" placeholder="Type and hit enter...">
+                        <button type="submit" class="header-search-submit" title="Search">Axtar</button>
+                    </form>
+                </div><!-- /#header-search -->
+            </div>
+        </div>
+    </header><!-- /#site-header -->
+</div><!-- /#site-header-wrap -->
+
+<!-- Slider -->
+<div class="rev_slider_wrapper fullwidthbanner-container">
+    <div id="rev-slider1" class="rev_slider fullwidthabanner">
+        <ul>
+            <!-- Slide 1 -->
+            <li data-transition="random">
+                <!-- Main Image -->
+                <img src="{%static 'assets/img/slider/slider-1.jpg'%}" alt="image" data-bgposition="center center" data-no-retina>
+                <!-- Layers -->
+                <div class="tp-caption tp-resizeme text-white text-center font-heading font-weight-700"
+                    data-x="['left','left','left','center']" data-hoffset="['30','30','0','0']"
+                    data-y="['middle','middle','middle','middle']" data-voffset="['-50','-50','-100','-80']"
+                    data-fontsize="['45','45','45','25']"
+                    data-lineheight="['70','70','50','30']"
+                    data-width="full"
+                    data-height="none"
+                    data-whitespace="normal"
+                    data-transform_idle="o:1;"
+                    data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
+                    data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+                    data-mask_in="x:0px;y:[100%];" 
+                    data-mask_out="x:inherit;y:inherit;" 
+                    data-start="700" 
+                    data-splitin="none" 
+                    data-splitout="none" 
+                    data-responsive_offset="on">
+                    PULSUZ MAŞIN XİDMƏTLƏRİ ÜÇÜN ABŞ-a gəlin
+                </div>
+
+                <div class="tp-caption tp-resizeme text-white text-center"
+                    data-x="['left','left','left','center']" data-hoffset="['30','30','0','0']"
+                    data-y="['middle','middle','middle','middle']" data-voffset="['0','0','20','5']"
+                    data-fontsize="['20','20','20','20']"
+                    data-lineheight="['25','25','25','20']"
+                    data-width="full"
+                    data-height="none"
+                    data-whitespace="normal"
+                    data-transform_idle="o:1;"
+                    data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
+                    data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+                    data-mask_in="x:0px;y:[100%];" 
+                    data-mask_out="x:inherit;y:inherit;" 
+                    data-start="700" 
+                    data-splitin="none" 
+                    data-splitout="none" 
+                    data-responsive_offset="on">
+                    
+Avtomobilinizin pulsuz nəzərdən keçirilməsi üçün qarajımıza xoş gəlmisiniz. Təklif yalnız 16 fevral 2017-ci ilədək etibarlıdır
+                </div>
+
+                <div class="tp-caption tp-resizeme text-white text-center"
+                    data-x="['left','left','left','center']" data-hoffset="['30','30','0','0']"
+                    data-y="['middle','middle','middle','middle']" data-voffset="['70','70','100','95']"
+                    data-width="full"
+                    data-height="none"
+                    data-whitespace="normal"
+                    data-transform_idle="o:1;"
+                    data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
+                    data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+                    data-mask_in="x:0px;y:[100%];" 
+                    data-mask_out="x:inherit;y:inherit;" 
+                    data-start="700" 
+                    data-splitin="none" 
+                    data-splitout="none" 
+                    data-responsive_offset="on">
+                    <a href="#" class="wprt-button outline white">
+                            TƏKLİFİMİZ</a>
+                </div>                
+            </li>
+            <!-- End Slide 1 -->
+
+            <!-- Slide 2 -->
+            <li data-transition="random">
+                <!-- Main Image -->
+                <img src="{% static 'assets/img/slider/slider-1.jpg'%}" alt="image" data-bgposition="center center" data-no-retina>
+                <!-- Layers -->
+                <div class="tp-caption tp-resizeme text-white text-center font-heading font-weight-700"
+                    data-x="['left','left','left','center']" data-hoffset="['30','30','0','0']"
+                    data-y="['middle','middle','middle','middle']" data-voffset="['-50','-50','-100','-80']"
+                    data-fontsize="['45','45','45','25']"
+                    data-lineheight="['70','70','50','30']"
+                    data-width="full"
+                    data-height="none"
+                    data-whitespace="normal"
+                    data-transform_idle="o:1;"
+                    data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
+                    data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+                    data-mask_in="x:0px;y:[100%];" 
+                    data-mask_out="x:inherit;y:inherit;" 
+                    data-start="700" 
+                    data-splitin="none" 
+                    data-splitout="none" 
+                    data-responsive_offset="on">
+                    PULSUZ CAR XİDMƏTLƏRİ ÜÇÜN ABŞ-a gəlin
+                </div>
+
+                <div class="tp-caption tp-resizeme text-white text-center"
+                    data-x="['left','left','left','center']" data-hoffset="['30','30','0','0']"
+                    data-y="['middle','middle','middle','middle']" data-voffset="['0','0','20','5']"
+                    data-fontsize="['20','20','20','20']"
+                    data-lineheight="['25','25','25','20']"
+                    data-width="full"
+                    data-height="none"
+                    data-whitespace="normal"
+                    data-transform_idle="o:1;"
+                    data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
+                    data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+                    data-mask_in="x:0px;y:[100%];" 
+                    data-mask_out="x:inherit;y:inherit;" 
+                    data-start="700" 
+                    data-splitin="none" 
+                    data-splitout="none" 
+                    data-responsive_offset="on">
+                    Avtomobilinizin pulsuz nəzərdən keçirilməsi üçün qarajımıza xoş gəlmisiniz. Təklif yalnız 16 fevral 2017-ci ilədək etibarlıdır
+                </div>
+
+                <div class="tp-caption tp-resizeme text-white text-center"
+                    data-x="['left','left','left','center']" data-hoffset="['30','30','0','0']"
+                    data-y="['middle','middle','middle','middle']" data-voffset="['70','70','100','95']"
+                    data-width="full"
+                    data-height="none"
+                    data-whitespace="normal"
+                    data-transform_idle="o:1;"
+                    data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
+                    data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+                    data-mask_in="x:0px;y:[100%];" 
+                    data-mask_out="x:inherit;y:inherit;" 
+                    data-start="700" 
+                    data-splitin="none" 
+                    data-splitout="none" 
+                    data-responsive_offset="on">
+                    <a href="#" class="wprt-button outline white">OUR OFFER</a>
+                </div>                
+            </li>
+            <!-- End Slide 2 --> 
+        </ul>
+    </div>
+</div><!-- /.rev_slider_wrapper -->
+
+<!-- Main Content -->
+<main id="main-content">
+    <div id="content-wrap">
+        <div id="site-content" class="site-content clearfix">
+            <div id="inner-content" class="inner-content-wrap">
+                <div id="page-content">
+                    <!-- Promotion -->
+                    <div class="row-action-1">
+                        <div class="wprt-container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="wprt-action-box bg-white has-paddings" data-padding-top="33" data-padding-right="70" data-padding-bottom="33" data-padding-left="70">
+                                        <div class="inner">
+                                            <div class="heading-wrap">
+                                                <div class="text-wrap">
+                                                    <h3 class="heading font-size-25">Biz avtomobillər üçün yüksək keyfiyyətli xidmət təklif edirik</h3>
+                                                </div>
+                                            </div>
+                                            <div class="button-wrap">
+                                                <a href="#" class="wprt-button">
+                                                        VƏDƏLƏŞMƏK</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.row -->
+                        </div><!-- /.wprt-container -->
+                    </div><!-- /.promotion -->
+
+                    <!-- Why Choose us -->
+                    <div class="row-why-choose">
+                        <div class="wprt-container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="wprt-spacer clearfix" data-desktop="160" data-mobi="60" data-smobi="60"></div>
+
+                                    <div class="wprt-headings clearfix text-left">
+                                        <h2 class="heading font-size-25">
+                                                Niyə bizi seçirlər?</h2>
+                                        <div class="sep w70 style-1"></div>
+                                    </div>
+
+                                    <div class="wprt-spacer clearfix" data-desktop="50" data-mobi="40" data-smobi="40"></div>
+
+                                    <div class="wprt-carousel-box arrow-style-2 arrow-square arrow-top has-arrows arrow60" data-auto="false" data-loop="true" data-gap="30" data-column="4" data-column2="2" data-column3="1">
+                                        <div class="owl-carousel owl-theme">
+                                            <div class="wprt-content-box bg-white has-paddings" data-padding-top="50" data-padding-right="35" data-padding-bottom="50" data-padding-left="35">
+                                                <div class="wprt-icon-box clearfix icon-top has-width w90 align-center">
+                                                    <div class="image-wrap bg-accent">
+                                                        <img src="{%static 'assets/img/icon-1.png'%}" alt="Image">
+                                                    </div>
+                                                    <h3 class="heading">
+                                                        <a target="_blank" href="#"><span>
+                                                                PEŞƏKAR XİDMƏT</span></a>
+                                                    </h3>
+                                                    <p class="desc">
+                                                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum convallis ligula nec.</span>
+                                                    </p>
+                                                </div><!-- /.wprt-icon-box -->
+                                            </div><!-- /.wprt-content-box -->
+
+                                            <div class="wprt-content-box bg-white has-paddings" data-padding-top="50" data-padding-right="35" data-padding-bottom="50" data-padding-left="35">
+                                                <div class="wprt-icon-box clearfix icon-top has-width w90 align-center">
+                                                    <div class="image-wrap bg-accent">
+                                                        <img src="{% static '/assets/img/icon-2.png' %}" alt="Image">
+                                                    </div>
+                                                    <h3 class="heading">
+                                                        <a target="_blank" href="#"><span>MÜŞTƏRİ İŞÇİLƏRİ</span></a>
+                                                    </h3>
+                                                    <p class="desc">
+                                                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum convallis ligula nec.</span>
+                                                    </p>
+                                                </div><!-- /.wprt-icon-box -->
+                                            </div><!-- /.wprt-content-box -->
+
+                                            <div class="wprt-content-box bg-white has-paddings" data-padding-top="50" data-padding-right="35" data-padding-bottom="50" data-padding-left="35">
+                                                <div class="wprt-icon-box clearfix icon-top has-width w90 align-center">
+                                                    <div class="image-wrap bg-accent">
+                                                        <img src="{% static 'assets/img/icon-3.png' %}" alt="Image">
+                                                    </div>
+                                                    <h3 class="heading">
+                                                        <a target="_blank" href="#"><span>
+                                                                Təmir və elektronika</span></a>
+                                                    </h3>
+                                                    <p class="desc">
+                                                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum convallis ligula nec.</span>
+                                                    </p>
+                                                </div><!-- /.wprt-icon-box -->
+
+                                            </div><!-- /.wprt-content-box -->
+                                            <div class="wprt-content-box bg-white has-paddings" data-padding-top="50" data-padding-right="35" data-padding-bottom="50" data-padding-left="35">
+                                                <div class="wprt-icon-box clearfix icon-top has-width w90 align-center">
+                                                    <div class="image-wrap bg-accent">
+                                                        <img src="{% static 'assets/img/icon-4.png' %}" alt="Image">
+                                                    </div>
+                                                    <h3 class="heading">
+                                                        <a target="_blank" href="#"><span>
+                                                                Uzun Müddətli GARANTİ</span></a>
+                                                    </h3>
+                                                    <p class="desc">
+                                                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum convallis ligula nec.</span>
+                                                    </p>
+                                                </div><!-- /.wprt-icon-box -->
+                                            </div><!-- /.wprt-content-box -->
+
+                                            <div class="wprt-content-box bg-white has-paddings" data-padding-top="50" data-padding-right="35" data-padding-bottom="50" data-padding-left="35">
+                                                <div class="wprt-icon-box clearfix icon-top has-width w90 align-center">
+                                                    <div class="image-wrap bg-accent">
+                                                        <img src="{% static 'assets/img/icon-1.png' %}" alt="Image">
+                                                    </div>
+                                                    <h3 class="heading">
+                                                        <a target="_blank" href="#"><span>PEŞƏKAR XİDMƏT
+                                                            </span></a>
+                                                    </h3>
+                                                    <p class="desc">
+                                                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum convallis ligula nec.</span>
+                                                    </p>
+                                                </div><!-- /.wprt-icon-box -->
+                                            </div><!-- /.wprt-content-box -->
+
+                                            <div class="wprt-content-box bg-white has-paddings" data-padding-top="50" data-padding-right="35" data-padding-bottom="50" data-padding-left="35">
+                                                <div class="wprt-icon-box clearfix icon-top has-width w90 align-center">
+                                                    <div class="image-wrap bg-accent">
+                                                        <img src="{%static 'assets/img/icon-2.png'%}" alt="Image">
+                                                    </div>
+                                                    <h3 class="heading">
+                                                        <a target="_blank" href="#"><span>
+                                                                MÜŞTƏRİ İŞÇİLƏRİ</span></a>
+                                                    </h3>
+                                                    <p class="desc">
+                                                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum convallis ligula nec.</span>
+                                                    </p>
+                                                </div><!-- /.wprt-icon-box -->
+                                            </div><!-- /.wprt-content-box -->
+                                        </div><!-- /.owl-carousel -->
+                                    </div><!-- /.wprt-carousel-box -->
+                                
+                                    <div class="wprt-spacer clearfix" data-desktop="100" data-mobi="60" data-smobi="60"></div>
+                                </div><!-- /.col-md-12 -->
+                            </div>
+                        </div> <!-- /.wprt-container -->
+                    </div><!-- /.row-why-choose -->
+
+                    <!-- About -->
+                    <div class="row-about">
+                        <div class="wprt-container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="wprt-spacer clearfix" data-desktop="100" data-mobi="60" data-smobi="60"></div>
+
+                                    <div class="wprt-headings text-center">
+                                        <h2 class="heading clearfix">HAQQINDA<span class="font-weight-700"><span class="text-accent-color"> Tik</span>Tok</span></h2>   
+                                        <div class="sep style-1"></div> 
+                                        
+                                        <div class="wprt-spacer clearfix" data-desktop="50" data-mobi="40" data-smobi="40"></div>
+                                    </div><!-- /.wprt-headings -->    
+                                </div><!-- /.col-md-12 -->
+
+                                <div class="col-md-4">
+                                    <div class="wprt-icon-box clearfix icon-left align-left">
+                                        <div class="icon-wrap">
+                                            <img src="{% static 'assets/img/icon-5.png'%}" alt="Image">
+                                        </div>
+
+                                        <h3 class="heading">
+                                            <a target="_blank" href="#"><span>
+                                                    RENOVASİYA MOTORU</span></a>
+                                        </h3>
+
+                                        <p class="desc">
+                                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum convallis ligula nec lipsum amet.</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="wprt-spacer clearfix" data-desktop="0" data-mobi="40" data-smobi="40"></div>
+                                </div><!-- /.col-md-4 -->
+
+                                <div class="col-md-4">
+                                    <div class="wprt-icon-box clearfix icon-left align-left">
+                                        <div class="icon-wrap">
+                                            <img src="{% static 'assets/img/icon-6.png'%}" alt="Image">
+                                        </div>
+
+                                        <h3 class="heading">
+                                            <a target="_blank" href="#"><span>
+                                                    ƏYLƏC PEDLƏRI</span></a>
+                                        </h3>
+
+                                        <p class="desc">
+                                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum convallis ligula nec lipsum amet.</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="wprt-spacer clearfix" data-desktop="0" data-mobi="40" data-smobi="40"></div>
+                                </div><!-- /.col-md-4 -->
+
+                                <div class="col-md-4">
+                                    <div class="wprt-icon-box clearfix icon-left align-left">
+                                        <div class="icon-wrap">
+                                            <img src="{% static 'assets/img/icon-7.png'%}" alt="Image">
+                                        </div>
+
+                                        <h3 class="heading">
+                                            <a target="_blank" href="#"><span>
+                                                    
+Avtomobil Yuma və Qulluq</span></a>
+                                        </h3>
+
+                                        <p class="desc">
+                                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum convallis ligula nec lipsum amet.</span>
+                                        </p>
+                                    </div>
+                                </div><!-- /.col-md-4 -->
+
+                                <div class="col-md-12">
+                                    <div class="wprt-spacer clearfix" data-desktop="100" data-mobi="60" data-smobi="60"></div>
+                                </div><!-- /.col-md-12 -->
+                            </div><!-- /.row -->
+                        </div><!-- /.wprt-container -->
+                    </div><!-- /.row-about -->
+                    <!-- Gallaries -->
+                    <div class="row-gallery">
+                        <div class="container-fluid">
+                            <div class="row no-gutters">
+                                <div class="col-md-12">
+                                    <div class="wprt-portfolio-slider" data-auto="false" data-loop="false" data-gap="0" data-column="4" data-column2="2" data-column3="1">
+                                        <div class="owl-carousel owl-theme">
+                                            <div class="project-item">
+                                                <div class="inner">
+                                                    <div class="effect-default">
+                                                        <div class="project-image">
+                                                            <img src="{% static 'assets/img/galleries/g1.jpg'%}" alt="image">
+                                                        </div> <!-- .project-img -->
+    
+                                                        <div class="text">
+                                                            <div>
+                                                                <h2><a href="#" title="">
+                                                                        RENOVASİYA MOTORU</a></h2>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum convallis ligula nec lipsum amet.</p>
+                                                                <div class="wprt-btn margin-top-28">
+                                                                    <a class="small wprt-button outline white" href="#">VIEW MORE</a>
+                                                                </div>
+                                                            </div>
+                                                        </div> <!-- .text -->
+                                                        <a class="zoom-popup" href="{%static 'assets/img/galleries/g1.jpg'%}" data-title="title">
+                                                            <i class="fa fa-arrows-alt"></i>
+                                                        </a>
+                                                    </div> <!-- .effect-default -->
+                                                </div>
+                                            </div><!-- /.project-item -->
+    
+                                            <div class="project-item">
+                                                <div class="inner">
+                                                    <div class="effect-default">
+                                                        <div class="project-image">
+                                                            <img src="{% static 'assets/img/galleries/g2.jpg'%}" alt="image">
+                                                        </div> <!-- .project-img -->
+    
+                                                        <div class="text">
+                                                            <div>
+                                                                <h2><a href="#" title="">
+                                                                        RENOVASİYA MOTORU</a></h2>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum convallis ligula nec lipsum amet.</p>
+                                                                <div class="wprt-btn margin-top-28">
+                                                                    <a class="small wprt-button outline white" href="#">VIEW MORE</a>
+                                                                </div>
+                                                            </div>
+                                                        </div> <!-- .text -->
+
+                                                        <a class="zoom-popup" href="{% static 'assets/img/galleries/g2.jpg'%}" data-title="title">
+                                                            <i class="fa fa-arrows-alt"></i>
+                                                        </a>
+                                                    </div> <!-- .effect-default -->
+                                                </div>
+                                            </div><!-- /.project-item -->
+    
+                                            <div class="project-item">
+                                                <div class="inner">
+                                                    <div class="effect-default">
+                                                        <div class="project-image">
+                                                            <img src="{% static 'assets/img/galleries/g3.jpg'%}" alt="image">
+                                                        </div> <!-- .project-img -->
+    
+                                                        <div class="text">
+                                                            <div>
+                                                                <h2><a href="#" title="">
+                                                                        RENOVASİYA MOTORU</a></h2>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum convallis ligula nec lipsum amet.</p>
+                                                                <div class="wprt-btn margin-top-28">
+                                                                    <a class="small wprt-button outline white" href="#">VIEW MORE</a>
+                                                                </div>
+                                                            </div>
+                                                        </div> <!-- .text -->
+
+                                                        <a class="zoom-popup" href="{% static 'assets/img/galleries/g3.jpg'%}" data-title="title">
+                                                            <i class="fa fa-arrows-alt"></i>
+                                                        </a>
+                                                    </div> <!-- .effect-default -->
+                                                </div>
+                                            </div><!-- /.project-item -->
+    
+                                            <div class="project-item">
+                                                <div class="inner">
+                                                    <div class="effect-default">
+                                                        <div class="project-image">
+                                                            <img src="{% static 'assets/img/galleries/g4.jpg'%}" alt="image">
+                                                        </div> <!-- .project-img -->
+    
+                                                        <div class="text">
+                                                            <div>
+                                                                <h2><a href="#" title="">
+                                                                        RENOVASİYA MOTORU</a></h2>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum convallis ligula nec lipsum amet.</p>
+                                                                <div class="wprt-btn margin-top-28">
+                                                                    <a class="small wprt-button outline white" href="#">VIEW MORE</a>
+                                                                </div>
+                                                            </div>
+                                                        </div> <!-- .text -->
+
+                                                        <a class="zoom-popup" href="assets/img/galleries/g4.jpg" data-title="title">
+                                                            <i class="fa fa-arrows-alt"></i>
+                                                        </a>
+                                                    </div> <!-- .effect-default -->
+                                                </div>
+                                            </div><!-- /.project-item -->
+                                        </div><!-- /.owl-carousel -->                                    
+                                    </div><!-- /.wprt-portfolio-slider -->
+                                </div><!-- /.col-md-12 -->
+                            </div><!-- /.row -->
+                        </div><!-- /.wprt-container -->
+                    </div><!-- /.row-gallery -->
+
+                    <!-- Services -->
+                    <div class="row-services">
+                        <div class="wprt-container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="wprt-spacer clearfix" data-desktop="160" data-mobi="60" data-smobi="60"></div>
+
+                                    <div class="wprt-headings clearfix text-left">
+                                        <h2 class="heading font-size-25">BİZİM XİDMƏTLƏ</h2>
+                                        <div class="sep w70 style-1"></div>
+                                    </div>
+
+                                    <div class="wprt-spacer clearfix" data-desktop="50" data-mobi="40" data-smobi="40"></div>
+
+                                    <div class="wprt-carousel-box arrow-style-2 arrow-square arrow-top has-arrows arrow60" data-auto="true" data-loop="true" data-gap="30" data-column="4" data-column2="3" data-column3="1">
+                                        <div class="owl-carousel owl-theme">
+                                            <div class="wprt-image-box">
+                                                <div class="item">
+                                                    <div class="inner">
+                                                        <div class="thumb">
+                                                            <img src="{%static 'assets/img/services/s1.jpg'%}" alt="image">
+                                                        </div><!-- /.thumb -->
+
+                                                        <div class="text-wrap">
+                                                            <h3 class="title">
+                                                                <a href="#">TEXNİKİ INSPEKSİYA TƏMİNATI</a>
+                                                            </h3>
+
+                                                            <div class="desc">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum convallis ligula nec lipsum amet.
+                                                            </div>
+
+                                                            <div class="wprt-btn margin-top-16">
+                                                                <a class="small wprt-button outline very-light" href="#">
+                                                                        DAHA ÇOX OXU</a>
+                                                            </div>
+                                                        </div><!-- /.text-wrap -->
+                                                    </div><!-- /.inner -->
+                                                </div><!-- /.item -->
+                                            </div><!-- /.wprt-image-box -->
+
+                                            <div class="wprt-image-box">
+                                                <div class="item">
+                                                    <div class="inner">
+                                                        <div class="thumb">
+                                                            <img src="{% static 'assets/img/services/s2.jpg'%}" alt="image">
+                                                        </div><!-- /.thumb -->
+
+                                                        <div class="text-wrap">
+                                                            <h3 class="title">
+                                                                <a href="#">
+                                                                        KLİMA TƏCRÜBƏSİ</a>
+                                                            </h3>
+
+                                                            <div class="desc">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum convallis ligula nec lipsum amet.
+                                                            </div>
+
+                                                            <div class="wprt-btn margin-top-16">
+                                                                <a class="small wprt-button outline very-light" href="#">DAHA ÇOX OXU
+                                                                    </a>
+                                                            </div>
+                                                        </div><!-- /.text-wrap -->
+                                                    </div><!-- /.inner -->
+                                                </div><!-- /.item -->
+                                            </div><!-- /.wprt-image-box -->
+
+                                            <div class="wprt-image-box">
+                                                <div class="item">
+                                                    <div class="inner">
+                                                        <div class="thumb">
+                                                            <img src="{%static 'assets/img/services/s3.jpg'%}" alt="image">
+                                                        </div><!-- /.thumb -->
+
+                                                        <div class="text-wrap">
+                                                            <h3 class="title">
+                                                                <a href="#">ASMA VƏ AMORTİZASİYA</a>
+                                                            </h3>
+
+                                                            <div class="desc">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum convallis ligula nec lipsum amet.
+                                                            </div>
+
+                                                            <div class="wprt-btn margin-top-16">
+                                                                <a class="small wprt-button outline very-light" href="#">READ MORE</a>
+                                                            </div>
+                                                        </div><!-- /.text-wrap -->
+                                                    </div><!-- /.inner -->
+                                                </div><!-- /.item -->
+                                            </div><!-- /.wprt-image-box -->
+
+                                            <div class="wprt-image-box">
+                                                <div class="item">
+                                                    <div class="inner">
+                                                        <div class="thumb">
+                                                            <img src="{%static 'assets/img/services/s4.jpg'%}" alt="image">
+                                                        </div><!-- /.thumb -->
+
+                                                        <div class="text-wrap">
+                                                            <h3 class="title">
+                                                                <a href="#">İŞIQLANDIRMA VƏ GÖRÜNÜRLÜĞÜNÜ</a>
+                                                            </h3>
+
+                                                            <div class="desc">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum convallis ligula nec lipsum amet.
+                                                            </div>
+
+                                                            <div class="wprt-btn margin-top-16">
+                                                                <a class="small wprt-button outline very-light" href="#">DAHA ƏTRAFLI</a>
+                                                            </div>
+                                                        </div><!-- /.text-wrap -->
+                                                    </div><!-- /.inner -->
+                                                </div><!-- /.item -->
+                                            </div><!-- /.wprt-image-box -->
+
+                                            <div class="wprt-image-box">
+                                                <div class="item">
+                                                    <div class="inner">
+                                                        <div class="thumb">
+                                                            <img src="{% static 'assets/img/services/s1.jpg'%}" alt="image">
+                                                        </div><!-- /.thumb -->
+
+                                                        <div class="text-wrap">
+                                                            <h3 class="title">
+                                                                <a href="#">AVTOMOBİLLƏRİN TEXNİKİ BAXIŞI</a>
+                                                            </h3>
+
+                                                            <div class="desc">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum convallis ligula nec lipsum amet.
+                                                            </div>
+
+                                                            <div class="wprt-btn margin-top-16">
+                                                                <a class="small wprt-button outline very-light" href="#">DAHA ƏTRAFLI</a>
+                                                            </div>
+                                                        </div><!-- /.text-wrap -->
+                                                    </div><!-- /.inner -->
+                                                </div><!-- /.item -->
+                                            </div><!-- /.wprt-image-box -->
+
+                                            <div class="wprt-image-box">
+                                                <div class="item">
+                                                    <div class="inner">
+                                                        <div class="thumb">
+                                                            <img src="{%static 'assets/img/services/s2.jpg'}" alt="image">
+                                                        </div><!-- /.thumb -->
+
+                                                        <div class="text-wrap">
+                                                            <h3 class="title">
+                                                                <a href="#">TƏMİZLƏNMƏSİ KONDİSİONERİN
+                                                                    </a>
+                                                            </h3>
+
+                                                            <div class="desc">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum convallis ligula nec lipsum amet.
+                                                            </div>
+
+                                                            <div class="wprt-btn margin-top-16">
+                                                                <a class="small wprt-button outline very-light" href="#">DAHA ƏTRAFLI</a>
+                                                            </div>
+                                                        </div><!-- /.text-wrap -->
+                                                    </div><!-- /.inner -->
+                                                </div><!-- /.item -->
+                                            </div><!-- /.wprt-image-box -->
+                                        </div><!-- /.owl-carousel -->
+                                    </div><!-- /.wprt-carousel-box -->
+                                
+                                    <div class="wprt-spacer clearfix" data-desktop="100" data-mobi="60" data-smobi="60"></div>
+                                </div><!-- /.col-md-12 -->
+                            </div>
+                        </div> <!-- /.wprt-container -->
+                    </div><!-- /.row-services -->
+
+                    <!-- Question & News -->
+                    <div class="row-questions">
+                        <div class="wprt-container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="wprt-spacer clearfix" data-desktop="100" data-mobi="60" data-smobi="60"></div>
+
+                                    <div class="wprt-headings text-center">
+                                        <h2 class="heading clearfix">SUALLAR VƏ XƏBƏR</h2>   
+                                        <div class="sep style-1"></div>
+
+                                        <div class="wprt-spacer clearfix" data-desktop="50" data-mobi="40" data-smobi="40"></div>
+                                    </div><!-- /.wprt-headings -->
+                                </div><!-- /.col-md-12 -->
+
+                                <div class="col-md-6">
+                                    <div class="wprt-toggles style-1">
+                                        <div class="toggle-item">
+                                            <h3 class="toggle-heading">
+                                                <span class="inner">TikTok kimdir?</span>
+                                            </h3>
+
+                                            <div class="toggle-content">
+                                                <p>Mauris elit ex, rhoncus a mauris at, consectetur placerat elit. Nam facilisis sollicitudin nunc. Etiam sed mattis urna, nec aliquam augue. In nisi dolor, tempor sit amet aliquet interdum, tempus eget ex. In eget ante sit amet tortor ullamcorper mollis. Aliquam eget aliquet sem. Vivamus quis felis eget magna iaculis volutpat.</p>
+                                            </div>
+                                        </div><!-- /.toggle-item -->
+
+                                        <div class="toggle-item">
+                                            <h3 class="toggle-heading">
+                                                <span class="inner">Hansı xidmətləri təqdim edirik?</span>
+                                            </h3>
+
+                                            <div class="toggle-content">
+                                                <p>Mauris elit ex, rhoncus a mauris at, consectetur placerat elit. Nam facilisis sollicitudin nunc. Etiam sed mattis urna, nec aliquam augue. In nisi dolor, tempor sit amet aliquet interdum, tempus eget ex. In eget ante sit amet tortor ullamcorper mollis. Aliquam eget aliquet sem. Vivamus quis felis eget magna iaculis volutpat.</p>
+                                            </div>
+                                        </div><!-- /.toggle-item -->
+
+                                        <div class="toggle-item active">
+                                            <h3 class="toggle-heading">
+                                                <span class="inner">Bizim xidmət və tətbiqi</span>
+                                            </h3>
+
+                                            <div class="toggle-content">
+                                                <p>Mauris elit ex, rhoncus a mauris at, consectetur placerat elit. Nam facilisis sollicitudin nunc. Etiam sed mattis urna, nec aliquam augue. In nisi dolor, tempor sit amet aliquet interdum, tempus eget ex. In eget ante sit amet tortor ullamcorper mollis. Aliquam eget aliquet sem. Vivamus quis felis eget magna iaculis volutpat.</p>
+                                            </div>
+                                        </div><!-- /.toggle-item -->  
+                                        
+                                        <div class="toggle-item">
+                                            <h3 class="toggle-heading">
+                                                <span class="inner">Texnologiyalar və innovasiyalar
+                                                    </span>
+                                            </h3>
+
+                                            <div class="toggle-content">
+                                                <p>Mauris elit ex, rhoncus a mauris at, consectetur placerat elit. Nam facilisis sollicitudin nunc. Etiam sed mattis urna, nec aliquam augue. In nisi dolor, tempor sit amet aliquet interdum, tempus eget ex. In eget ante sit amet tortor ullamcorper mollis. Aliquam eget aliquet sem. Vivamus quis felis eget magna iaculis volutpat.</p>
+                                            </div>
+                                        </div><!-- /.toggle-item -->  
+                                    </div><!-- /.wprt-toggles -->
+
+                                    <div class="wprt-spacer clearfix" data-desktop="0" data-mobi="40" data-smobi="40"></div>
+                                </div><!-- /.col-md-6 --> 
+
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="wprt-news">
+                                                <div class="news-item">
+                                                    <div class="inner">
+                                                        <div class="thumb">
+                                                            <img src="{% static 'assets/img/news/1.jpg'%}" alt="image">
+                                                        </div>
+                                                        
+                                                        <div class="text-wrap">
+                                                            <h3 class="title">
+                                                                <a href="#">HANSI EMALATXANASINA SEÇMƏK?</a>
+                                                            </h3>
+
+                                                            <div class="meta">
+                                                                <span class="post-by-author">by ...</span>
+                                                                <span class="sep">/</span>
+                                                                <span class="post-date">12 Iyul 2019</span>
+                                                                <span class="sep">/</span>
+                                                                <span class="past-categories">Mexaniki
+                                                                    </span>  
+                                                            </div>
+                                                            
+                                                            <p class="excerpt-text-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum convallis ligula nec lipsum amet.</p>
+                                                        </div><!-- /.text-wrap -->
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="wprt-spacer clearfix" data-desktop="0" data-mobi="40" data-smobi="40"></div>
+                                        </div><!-- /.col-md-6 --> 
+
+                                        <div class="col-md-6">
+                                            <div class="wprt-news style-1">
+                                                <div class="news-item">
+                                                    <div class="inner">
+                                                        <div class="thumb">
+                                                            <img src="{%static 'assets/img/news/2.jpg'%}" alt="image">
+                                                        </div>
+                                                        
+                                                        <div class="text-wrap">
+                                                            <h3 class="title">
+                                                                <a href="#">BƏRPA AVTOMOBİL BOYA
+                                                                    </a>
+                                                            </h3>
+
+                                                            <div class="meta">
+                                                                <span class="post-by-author">by ...</span>
+                                                                <span class="sep">/</span>
+                                                                <span class="post-date">12 Iyul 2019</span>
+                                                                <span class="sep">/</span>
+                                                                <span class="past-categories">Mexaniki</span>  
+                                                            </div>
+                                                            
+                                                            <p class="excerpt-text-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum convallis ligula nec lipsum amet.</p>
+                                                        </div><!-- /.text-wrap -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- /.col-md-6 --> 
+                                    </div><!-- /.row -->
+                                </div><!-- /.col-md-6 --> 
+
+                                <div class="col-md-12">
+                                    <div class="wprt-spacer clearfix" data-desktop="100" data-mobi="60" data-smobi="60"></div>                                    
+                                </div><!-- /.col-md-12 -->
+                            </div><!-- /.row -->
+                        </div><!-- /.wprt-container -->
+                    </div><!-- /.row-questions -->
+
+                    <!-- Partners -->
+                    <div class="row-partners">
+                        <div class="wprt-container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="wprt-spacer clearfix" data-desktop="100" data-mobi="60" data-smobi="60"></div>
+                                </div><!-- /.col-md-12 -->
+
+                                <div class="col-md-6">
+                                    <div class="wprt-headings clearfix">
+                                        <h2 class="heading">BİZİM MÜŞTƏRİLƏR</h2>
+                                        <div class="sep style-1"></div>
+                                        <div class="wprt-spacer clearfix" data-desktop="50" data-mobi="40" data-smobi="40"></div>
+                                    </div>
+
+                                    <div class="wprt-partner-grid style-1 col-3 gutter-12">
+                                        <div class="partner-wrap clearfix">
+                                            <div class="partner-row clearfix">
+                                                <div class="partner-item">
+                                                    <div class="inner-item">
+                                                        <a target="_blank" href="#">
+                                                            <img src="{%static 'assets/img/partners/1.png'%}" alt="image">
+                                                        </a>
+                                                    </div>
+                                                </div><!-- /.partner-item -->
+
+                                                <div class="partner-item">
+                                                    <div class="inner-item">
+                                                        <a target="_blank" href="#">
+                                                            <img src="{% static 'assets/img/partners/2.png'%}" alt="image">
+                                                        </a>
+                                                    </div>
+                                                </div><!-- /.partner-item -->
+
+                                                <div class="partner-item no-border-right">
+                                                    <div class="inner-item">
+                                                        <a target="_blank" href="#">
+                                                            <img src="{%static 'assets/img/partners/3.png'%}" alt="image">
+                                                        </a>
+                                                    </div>
+                                                </div><!-- /.partner-item -->
+
+                                                <div class="partner-item no-border-bottom">
+                                                    <div class="inner-item">
+                                                        <a target="_blank" href="#">
+                                                            <img src="{% static 'assets/img/partners/4.png'%}" alt="image">
+                                                        </a>
+                                                    </div>
+                                                </div><!-- /.partner-item -->
+
+                                                <div class="partner-item no-border-bottom">
+                                                    <div class="inner-item">
+                                                        <a target="_blank" href="#">
+                                                            <img src="{%static 'assets/img/partners/5.png'%}" alt="image">
+                                                        </a>
+                                                    </div>
+                                                </div><!-- /.partner-item -->
+
+                                                <div class="partner-item no-border-bottom no-border-right">
+                                                    <div class="inner-item">
+                                                        <a target="_blank" href="#">
+                                                            <img src="{%static 'assets/img/partners/6.png'%}" alt="image">
+                                                        </a>
+                                                    </div>
+                                                </div><!-- /.partner-item -->
+                                            </div><!-- /.partner-row -->
+                                        </div><!-- /.partner-wrap -->
+                                    </div>
+
+                                    <div class="wprt-spacer clearfix" data-desktop="0" data-mobi="40" data-smobi="40"></div>
+                                </div><!-- /.col-md-6 -->
+
+                                <div class="col-md-6">
+                                    <div class="wprt-headings clearfix">
+                                        <h2 class="heading">TÖVSİYƏLƏR</h2>
+                                        <div class="sep style-1"></div>
+                                        <div class="wprt-spacer clearfix" data-desktop="50" data-mobi="40" data-smobi="40"></div>
+                                    </div>
+
+                                    <div class="wprt-carousel-box arrow-style-2 arrow-square arrow-top has-arrows arrow60" data-auto="true" data-loop="true" data-gap="30" data-column="1" data-column2="1" data-column3="1">
+                                        <div class="owl-carousel owl-theme">
+                                            <div class="wprt-testimonials clearfix style-1">
+                                                <div class="item">
+                                                    <div class="inner">
+                                                        <blockquote class="text">
+                                                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum non odio pellentesque enim elementum posuere quis vitae tellus. In vitae rutrum sem. Quisque eu tristique ligula. Proin malesuada leo at mauris molestie, nec pellentesque sapien elementum. Etiam et maximus nisl.
+                                                            <div class="arrow"></div>
+                                                            <div class="arrow2"></div>
+                                                        </blockquote>
+            
+                                                        <div class="person">
+                                                            <div class="avatar">
+                                                                 <div class="thumb">
+                                                                    <img src="{%static 'assets/img/clients/1.jpg'%}" alt="image">
+                                                                </div> 
+                                                            </div>
+            
+                                                            <div class="info">
+                                                                <h6 class="name">...</h6>   
+                                                                <span class="position">Mexanik</span>
+                                                            </div>
+                                                        </div>  <!-- /.person -->                         
+                                                    </div>
+                                                </div>
+                                            </div><!-- /.wprt-testimonials -->
+
+                                            <div class="wprt-testimonials clearfix style-1">
+                                                <div class="item">
+                                                    <div class="inner">
+                                                        <blockquote class="text">
+                                                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum non odio pellentesque enim elementum posuere quis vitae tellus. In vitae rutrum sem. Quisque eu tristique ligula. Proin malesuada leo at mauris molestie, nec pellentesque sapien elementum. Etiam et maximus nisl.
+                                                            <div class="arrow"></div>
+                                                            <div class="arrow2"></div>
+                                                        </blockquote>
+            
+                                                        <div class="person">
+                                                            <div class="avatar">
+                                                                 <div class="thumb">
+                                                                    <img src="{%static 'assets/img/clients/1.jpg'%}" alt="image">
+                                                                </div> 
+                                                            </div>
+            
+                                                            <div class="info">
+                                                                <h6 class="name">...</h6>   
+                                                                <span class="position">Mexanik</span>
+                                                            </div>
+                                                        </div>  <!-- /.person -->                         
+                                                    </div>
+                                                </div>
+                                            </div><!-- /.wprt-testimonials -->
+
+                                            <div class="wprt-testimonials clearfix style-1">
+                                                <div class="item">
+                                                    <div class="inner">
+                                                        <blockquote class="text">
+                                                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum non odio pellentesque enim elementum posuere quis vitae tellus. In vitae rutrum sem. Quisque eu tristique ligula. Proin malesuada leo at mauris molestie, nec pellentesque sapien elementum. Etiam et maximus nisl.
+                                                            <div class="arrow"></div>
+                                                            <div class="arrow2"></div>
+                                                        </blockquote>
+            
+                                                        <div class="person">
+                                                            <div class="avatar">
+                                                                 <div class="thumb">
+                                                                    <img src="{%static 'assets/img/clients/1.jpg'%}" alt="image">
+                                                                </div> 
+                                                            </div>
+            
+                                                            <div class="info">
+                                                                <h6 class="name">...</h6>   
+                                                                <span class="position">Mexanik</span>
+                                                            </div>
+                                                        </div>  <!-- /.person -->                         
+                                                    </div>
+                                                </div>
+                                            </div><!-- /.wprt-testimonials -->
+
+                                            <div class="wprt-testimonials clearfix style-1">
+                                                <div class="item">
+                                                    <div class="inner">
+                                                        <blockquote class="text">
+                                                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum non odio pellentesque enim elementum posuere quis vitae tellus. In vitae rutrum sem. Quisque eu tristique ligula. Proin malesuada leo at mauris molestie, nec pellentesque sapien elementum. Etiam et maximus nisl.
+                                                            <div class="arrow"></div>
+                                                            <div class="arrow2"></div>
+                                                        </blockquote>
+            
+                                                        <div class="person">
+                                                            <div class="avatar">
+                                                                 <div class="thumb">
+                                                                    <img src="{%static 'assets/img/clients/1.jpg'%}" alt="image">
+                                                                </div> 
+                                                            </div>
+            
+                                                            <div class="info">
+                                                                <h6 class="name">...</h6>   
+                                                                <span class="position">Mexanik</span>
+                                                            </div>
+                                                        </div>  <!-- /.person -->                         
+                                                    </div>
+                                                </div>
+                                            </div><!-- /.wprt-testimonials -->
+                                        </div><!-- /.owl-carousel -->
+                                    </div><!-- /.wprt-carousel-box -->                                    
+                                </div><!-- /.col-md-6 -->
+
+                                <div class="col-md-12">
+                                    <div class="wprt-spacer clearfix" data-desktop="100" data-mobi="60" data-smobi="60"></div>
+                                </div><!-- /.col-md-12 -->
+                            </div><!-- /.row -->
+                        </div><!-- /.wprt-container -->
+                    </div><!-- /.row-partners -->
+                </div><!-- /#page-content -->
+            </div><!-- /#inner-content -->
+        </div><!-- /#site-content -->
+    </div><!-- /#content-wrap -->
+</main><!-- /#main-content -->
+
+<!-- Promotion -->
+<div class="row-promotion bg-accent">
+    <div class="wprt-container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="wprt-spacer clearfix" data-desktop="25" data-mobi="25" data-smobi="35"></div>
+
+                <div class="wprt-action-box">
+                    <div class="inner">
+                        <div class="heading-wrap">
+                            <div class="text-wrap">
+                                <h3 class="heading text-white font-size-25">Şirkətimiz və Avtoservis 1982-ci ildən fəaliyyət göstərir
+                                    </h3>
+                            </div>
+                        </div>
+                        <div class="button-wrap">
+                            <a href="#" class="wprt-button white">BİZİM KOMANDA</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wprt-spacer clearfix" data-desktop="25" data-mobi="25" data-smobi="35"></div>
+            </div><!-- /.col-md-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.wprt-container -->
+</div><!-- /.promotion -->
+
+<!-- Footer -->
+<footer id="footer">
+    <div id="footer-widgets" class="wprt-container">
+        <div class="wprt-row gutter-30">
+
+            <div class="span_1_of_4 col">
+                <div class="widget widget_text">
+                    <h2 class="widget-title"><span>HAQQIMIZDA</span></h2>
+                    <div class="textwidget">
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum non odio pellentesque enim elementum posuere quis vitae tellus. In vitae rutrum sem.</p>
+                    </div>
+
+                    <div class="widget widget_socials">
+                        <div class="socials clearfix">
+                            <div class="icon">
+                                <a target="_blank" href="#">
+                                <i class="fa fa-facebook"></i></a>
+                            </div>
+                            <div class="icon active">
+                                <a target="_blank" href="#">
+                                <i class="fa fa-twitter"></i></a>
+                            </div>
+                            <div class="icon">
+                                <a target="_blank" href="#"><i class="fa fa-google-plus"></i></a>
+                            </div>
+                            <div class="icon">
+                                <a target="_blank" href="#">
+                                <i class="fa fa-pinterest-p"></i></a>
+                            </div>
+                            <div class="icon">
+                                <a target="_blank" href="#"><i class="fa fa-instagram"></i></a>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>  
+
+                <div class="wprt-spacer" data-desktop="0" data-mobi="35" data-smobi="35"></div>              
+            </div>
+
+            <div class="span_1_of_4 col">
+                <div class="widget widget_links">
+                    <h2 class="widget-title"><span>QISA NAVİQASİYA
+                        </span></h2>
+                    <ul class="wprt-links clearfix col2">
+                        <li><a href="./home.html">Ana seyfe </a></li>
+                        <li><a href="/register.html">Qeydiyyat</a></li>
+                        <li><a href="./page-team.html">Bizim komanda</a></li>                        
+                        <li><a href="./login.html">Giriş</a></li>
+                        <li><a href="./page-work-galleries.html">Iş</a></li>
+                        <li><a href="#">Mənim Hesabım</a></li>
+                        <li><a href="./page-services.html">Xidmətlər</a></li>
+                        <li><a href="#">Göndərmə</a></li>
+                        <li><a href="#">Ödənişlər</a></li>                        
+                        <li><a href="#">ən yaxşı təklif</a></li>
+                        <li><a href="./page-contact.html">Əlaqə</a></li>
+                        <li><a href="#">Dəstək</a></li>
+                    </ul>
+                </div>
+                <div class="wprt-spacer" data-desktop="0" data-mobi="35" data-smobi="35"></div>
+            </div>
+
+            <div class="span_1_of_4 col">
+                <div class="widget widget_recent_news">
+                    <h2 class="widget-title"><span>ON İSMARIC</span></h2>
+                    <ul class="recent-news clearfix">
+                        <li class="clearfix">
+                            <div class="thumb">
+                                <img src="{%static 'assets/img/news/n-1.jpg'%}" alt="image">
+                            </div>
+                                        
+                            <div class="texts">
+                                <h3><a href="#">Mühərrik xidmət və təmir
+                                    </a></h3> 
+                                <span class="post-date">
+                                    <span class="entry-date">12 Iyun 2019</span>
+                                </span>
+                            </div>
+                        </li>
+
+                        <li class="clearfix">
+                            <div class="thumb">
+                                <img src="{% static 'assets/img/news/n-2.jpg'%}" alt="image">
+                            </div>
+                                        
+                            <div class="texts">
+                                <h3><a href="#">Avtomobil boya cilalama</a></h3> 
+                                <span class="post-date">
+                                    <span class="entry-date">12 Iyun 2019</span>
+                                </span>
+                            </div>
+                        </li>
+
+                        <li class="clearfix">
+                            <div class="thumb">
+                                <img src="{% static 'assets/img/news/n-3.jpg'%}" alt="image">
+                            </div>
+                                        
+                            <div class="texts">
+                                <h3><a href="#">Yağ və hava filtrlərinin dəyişdirilməsi</a></h3> 
+                                <span class="post-date">
+                                    <span class="entry-date">12 Iyun 2019</span>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="wprt-spacer" data-desktop="0" data-mobi="35" data-smobi="35"></div>              
+            </div>
+
+            <div class="span_1_of_4 col">
+                <div class="widget widget_contact_us">
+                    <h2 class="widget-title"><span>BİZİMLƏ ƏLAQƏ</span></h2>                    
+                    <div class="widget widget_information">
+                        <ul class="clearfix">
+                            <li class="address">
+                                <i class="fa fa-home"></i>
+                                <span>Phoenix Way, Stretford, Manchester M41 7TB, United Kingdom</span>
+                            </li>
+                            <li class="phone">
+                                <i class="fa fa-phone"></i>
+                                <span>+1 522-356-7800</span>
+                            </li>
+                            <li class="fax">  
+                                <i class="fa fa-fax"></i>                             
+                                <span>+1 202-667-4499</span>
+                            </li>
+                            <li class="email">
+                                <i class="fa fa-envelope-o"></i>
+                                <span>support@autorepair.com</span>
+                            </li>
+                            <li class="hour">  
+                                <i class="fa fa-clock-o"></i>                             
+                                <span>Bazar ertəsindən cümə gününə qədər: 8:00 - 1:00</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bottom -->
+<div id="bottom" class="clearfix style-1">
+    <div id="bottom-bar-inner" class="wprt-container">
+        <div class="bottom-bar-inner-wrap">
+            <div class="bottom-bar-content">
+                <div id="copyright">
+                    TikTok | 2019
+                </div>
+            </div>
+
+            <div class="bottom-bar-menu">
+                <ul class="bottom-nav">
+                    <li class="menu-item"><a href="./home.html">Ana seyfe</a></li>
+                    <li class="menu-item"><a href="./page-team.html">Bizim komanda</a></li>
+                    <li class="menu-item"><a href="./page-work-galleries.html">Iş</a></li>
+                    <li class="menu-item"><a href="./page-services.html">Xidmətlər</a></li>
+                    <li class="menu-item"><a href="./page-contact.html">Əlaqə</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+
+<!-- Scroll Top -->
+<a id="scroll-top"></a>
+
+<!-- Javascript -->
+<script src="{% static 'assets/js/jquery.min.js'%}"></script>
+<script src="{% static 'assets/js/bootstrap.min.js'%}"></script>
+<script src="{% static 'assets/js/plugins.js'%}"></script>
+<script src="{% static 'assets/js/owl.carousel.min.js'%}"></script>
+<script src="{% static 'assets/js/cubeportfolio.js'%}"></script>
+<script src="{% static 'assets/js/shortcodes.js'%}"></script>
+<script src="{% static 'assets/js/main.js'%}"></script>
+
+<!-- Revolution Slider -->
+<script src="{% static 'includes/rev-slider/js/jquery.themepunch.tools.min.j'%}"></script>
+<script src="{% static 'includes/rev-slider/js/jquery.themepunch.revolution.min.js'%}"></script>
+<script src="{% static 'assets/js/rev-slider.js'%}"></script>
+
+<!-- Load Extensions only on Local File Systems ! The following part can be removed on Server for On Demand Loading -->
+<script src="{% static 'includes/rev-slider/js/extensions/revolution.extension.actions.min.js'%}"></script>
+<script src="{% static 'includes/rev-slider/js/extensions/revolution.extension.carousel.min.js'%}"></script>
+<script src="{% static 'includes/rev-slider/js/extensions/revolution.extension.kenburn.min.js'%}"></script>
+<script src="{% static 'includes/rev-slider/js/extensions/revolution.extension.layeranimation.min.js'%}"></script>
+<script src="{% static 'includes/rev-slider/js/extensions/revolution.extension.migration.min.js'%}"></script>
+<script src="{% static 'includes/rev-slider/js/extensions/revolution.extension.navigation.min.js'%}"></script>
+<script src="{% static 'includes/rev-slider/js/extensions/revolution.extension.parallax.min.js'%}"></script>
+<script src="{% static 'includes/rev-slider/js/extensions/revolution.extension.slideanims.min.js'%}"></script>
+<script src="{% static 'includes/rev-slider/js/extensions/revolution.extension.video.min.js'%}"></script>
+
+</body>
+
+<!-- Mirrored from themeparagon.com/html5-templates/autorepair/home.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Jun 2019 13:53:48 GMT -->
+</html>

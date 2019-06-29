@@ -1,0 +1,169 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"   integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css" />
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"   integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+
+    <title>Home</title>
+</head>
+
+<body>
+    
+    <h1>Home</h1>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+                <div id="map" style="width: 100%; height: 500px;"></div>
+            </div>
+        </div>
+    </div>
+   
+
+
+        <script>
+            var cordinates = [];
+
+
+
+            function initMap(target = false) {
+                //Map options
+                var options;
+                if (target) {
+                    options = {
+                        zoom: 5,
+                        center: target
+                    }
+                }
+                else {
+                    options = {
+                        zoom: 12,
+                        center: { lat: 40.4109471, lng: 49.8681077 }
+                    }
+                }
+
+                //New map
+                var map = new google.maps.Map(document.getElementById('map'), options);
+
+                //Add marker
+                var marker = new google.maps.Marker({
+                    // position: { lat: 40.4109471, lng: 49.8681077 },
+                    map: map,
+                    title: "Cihaz ID: {{ company_id }} ",
+                    icon: "{%  static 'companies_app/images/marker.png' %}"
+                });
+
+                marker.addListener('mouseover', function () {   
+                    infoWindow.open(map, marker);
+                });
+
+                {% for obj in object_list %}
+
+                    var infoWindow{{forloop.counter}} = new google.maps.InfoWindow({
+                      
+                       content: '<form method="get", action="{% url "companies_app:company_detail" obj.company_id %}">    <label for="exampleFormControlSelect1">{{obj.company_name}} {{obj.company_id}}</label> <button  type="submit" class="btn btn-success btn-sm btn-block">Etrafli</button> </form>'               
+                    });
+                    addMarker({{ obj.coords | safe }}, '{{ obj.text }}', "{{ obj.device_icon}}", infoWindow{{forloop.counter}});
+                    cordinates.push({
+                        "name": '{{ obj.text }}',
+                        "data": {{ obj.coords | safe }},
+                        "icon": "{{ obj.device_icon}}",
+                        
+                        })
+                {% endfor %}
+
+            
+            
+            // Add Marker function
+            function addMarker(coords, text, device_icon, new_info) {
+                var marker = new google.maps.Marker({
+                    position: coords,
+                    map: map,
+                    // title: "Cihaz ID: {{ text }} ",
+                    icon: device_icon,
+                });
+                marker.addListener('click', function () {
+                    new_info.open(map, marker);
+                }, false);
+
+                {% comment %} marker.addListener('mouseout', function () {
+                    new_info.close(map, marker);
+                }, false); {% endcomment %}
+                
+            }
+            
+             
+
+            $(".search-btn").click(function (e) {
+                var text = $("input[name=q]").val();
+                var result = false;
+                if (text !== "") {
+                    for (index in cordinates) {
+                        if (cordinates[index].name.includes(text)) {
+                            result = cordinates[index].data;
+                            break;
+                        }
+                    }
+                }
+                if (result) {
+                    var options = {
+                        zoom: 15,
+                        center: result
+                    }
+                    //New map
+                    cordinates = [];
+                    initMap(target=result);
+                }
+                return result;
+            })
+
+            }
+
+
+
+        </script>
+
+       
+
+        <script async defer
+     
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzjnO5f_DJlfKjOxgZ2PO7FEDTCMkDIiM&callback=initMap"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+
+ 
+
+
+<form method="post">
+{% for service in services %}
+    <label>{{service.service_name}}</label>
+    <input type="checkbox" name="service" value="{{service.pk}}">
+{% endfor %}
+{% csrf_token %}
+<button>{% trans "Choose" %}</button>
+</form>
+           
+</body>
+
+</html>

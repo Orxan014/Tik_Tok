@@ -1,0 +1,190 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'calendar_app/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/fullcalendar-4.2.0/packages/core/main.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/fullcalendar-4.2.0/packages/daygrid/main.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/fullcalendar-4.2.0/packages/timegrid/main.css' %}">
+    <link rel="stylesheet" href="{% static 'snackbar/snackbar.css' %}">
+
+    <title>Document</title>
+</head>
+<body>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Sifarishin elave olunmasi</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="start_date">
+                    <div class="form-group">
+                        <label for="email">Bashliq:</label>
+                        <input type="text" required name="title" class="form-control" id="title">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Bashlama vaxti</label>
+                        <select name="start_time" class="form-control" id="start_time">
+                        </select>
+
+                    </div>
+                    <button type="submit" class="btn btn-primary">Yadda saxla</button>
+                </form>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<h1>Company</h1>
+
+<p>{{ company.company_id }}</p>
+<p>{{ company.company_name }}</p>
+<p>{{ company.adress }}</p>
+<p>{{ company.email }}</p>
+<p>{{ company.phone_number }}</p>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12">
+            <div id='calendar'></div>
+        </div>
+    </div>
+</div>
+<div id="snackbar"></div>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzjnO5f_DJlfKjOxgZ2PO7FEDTCMkDIiM&callback=initMap"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script src="{% static 'assets/fullcalendar-4.2.0/packages/core/main.js' %}"></script>
+<script src="{% static 'assets/fullcalendar-4.2.0/packages/interaction/main.js' %}"></script>
+<script src="{% static 'assets/fullcalendar-4.2.0/packages/daygrid/main.js' %}"></script>
+<script src="{% static 'assets/fullcalendar-4.2.0/packages/timegrid/main.js' %}"></script>
+<script src="{% static 'assets/fullcalendar-4.2.0/packages/moment/main.js' %}"></script>
+<script src="{% static 'snackbar/snackbar.js' %}"></script>
+<script>
+    var company_id = "{{ company.company_id }}";
+    function pad(n) {
+        if (Number(n) < 10) {
+            return "0" + n;
+        }
+        else {
+            return n;
+        }
+    }
+
+    function make_option(text, disabled=false) {
+        if (disabled) {
+            return "<option value='" + text + "' disabled>" + text + " məşğuldur<option>"
+        }
+        else {
+            return "<option value='" + text + "'>" + text + "<option>"
+        }
+    }
+   
+    let events = {{events|safe}}
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+            
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                plugins: ['interaction', 'dayGrid', 'timeGrid'],
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                },
+                
+               
+                
+                validRange: function(nowDate) {
+                    
+                    return {
+                    start: nowDate,
+                    };
+                },
+                defaultDate: '2019-06-12',
+                navLinks: true, // can click day/week names to navigate views
+                selectable: true,
+                selectMirror: true,
+                select: function (arg) {
+                    var start_date = `${arg.start.getFullYear()}-${pad(arg.start.getMonth()+1)}-${pad(arg.start.getDate())}`;
+                    $("input[name=start_date]").val(start_date);
+                    $("#myModal").modal();
+                    $.ajax({
+                        url: "{% url 'companies_app:getfreetime' %}?id=" + company_id + "&time=" + start_date,
+                        method: "GET",
+                        contentType: "application/json",
+                        success: function (data) {
+                            $("#start_time").html("");
+                            var option_list="";
+                            for (var i=0; i< data.length; i++) {
+                                console.log(data[i].free);
+                                if (data[i] && data[i].free) {
+                                    console.log(data[i].time);
+                                    option_list += make_option(data[i].time);
+                                }
+                                else {
+                                    option_list += make_option(data[i].time, true);
+                                }
+                            }
+                            $("#start_time").html(option_list);
+                            $("#start_time").val("09:00");
+                        }
+                    });
+                    base_calendar = calendar;
+                   /* calendar.addEvent({
+                        title: title,
+                        start: arg.start,
+                        end: arg.end,
+                        allDay: arg.allDay
+                    });
+
+                    calendar.unselect() */
+                },
+                editable: false,
+                eventLimit: true, // allow "more" link when too many events
+                events: events,
+                displayEventTime:false
+            });
+
+            /* calendar.on('dateClick', function (arg) {
+
+            }); */
+
+            calendar.render();
+        });
+
+</script>
+
+{% if messages %}
+    {% for msg in messages %}
+        <script>
+            snackbar("{{ msg }}");
+        </script>
+    {% endfor %}
+{% endif %}
+</body>
+</html>
